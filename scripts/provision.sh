@@ -9,8 +9,5 @@ set -e
 
 # Example
 
-apt-get update
-apt-get install tree
-# apt-get install git
-# git clone https://github.com/chintamanil/dotfiles.git
-# source ~/dotfiles/bootstrap.sh
+#apt-get update
+#apt-get install tree
