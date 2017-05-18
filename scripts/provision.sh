@@ -9,5 +9,15 @@ set -e
 
 # Example
 
-#apt-get update
-#apt-get install tree
+apt-get update
+apt-get install tree
+apt-get install git
+
+# source ./node.sh
+# source ./redis.sh
+# source ./mongodb.sh
+
+# source setup_redis_mongo.sh
+
+git clone https://github.com/chintamanil/dotfiles.git
+source dotfiles/bootstrap.sh
