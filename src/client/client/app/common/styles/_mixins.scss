@@ -1,0 +1,81 @@
+@import './_variables';
+@mixin box-sizing($boxSizing) {
+    -moz-box-sizing: $boxSizing;
+    -webkit-box-sizing: $boxSizing;
+    box-sizing: $boxSizing;
+    -o-box-sizing: $boxSizing;
+    -ms-box-sizing: $boxSizing;
+}
+
+@mixin border-radius($val) {
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    border-radius: $val;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+
+@mixin apperance($style) {
+    -webkit-appearance: $style;
+    -moz-appearance: $style;
+    appearance: $style;
+}
+
+@mixin linear-gradient($startColor, $endColor) {
+    background: $startColor;
+    background: -moz-linear-gradient(top, $startColor 0%, $endColor 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $startColor), color-stop(100%, $endColor));
+    background: -webkit-linear-gradient(top, $startColor 0%, $endColor 100%);
+    background: -o-linear-gradient(top, $startColor 0%, $endColor 100%);
+    background: -ms-linear-gradient(top, $startColor 0%, $endColor 100%);
+    background: linear-gradient(to bottom, $startColor 0%, $endColor 100%);
+}
+
+@mixin buttonClass($margin, $padding, $display) {
+    @include linear-gradient($buttonStartColor, $buttonEndColor);
+    display: $display;
+    padding: $padding;
+    margin: $margin;
+    @include border-radius(5px);
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    font-size: $buttonFont;
+    color: $buttonTextColor;
+    font-weight: bold;
+    border: 1px solid $buttonTopLeftColor;
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin font-size($sizeValue: 12) {
+    font-size: $sizeValue + px; //fallback for old browsers
+    font-size: $sizeValue;
+}

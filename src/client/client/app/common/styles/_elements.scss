@@ -1,0 +1,89 @@
+@import './_mixins';
+@import './_variables';
+
+input {
+    height: 30px;
+    border: none;
+    width: 100%;
+}
+
+input,
+ {
+    background-color: $sendMoneyBodyColor;
+    @include apperance(none);
+    // border: 1px solid $bodyBorderColor;
+    width: 100%;
+    @include border-radius(5px);
+}
+
+span {
+    font-size: $headerFont;
+}
+
+label {
+    font-size: $headerFont;
+    color: $headerColor;
+    padding: 5px 5px 5px 0px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+input.form-control {
+    font-size: $headerFont;
+    vertical-align: middle;
+    text-align: bottom;
+}
+
+a,
+label,
+span,
+input,
+table,
+td,
+tr, button {
+    font-size: $headerFont;
+}
+
+
+form {
+    padding: 15px;
+}
+
+footer div button {
+    min-width: 100px;
+}
+
+footer {
+    position: fixed;
+    border-top: 2px solid black;
+    opacity: 0.95;
+}
+
+header {
+    border-bottom: 2px solid black;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    border: 2px solid black;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $sendMoneyBodyColor inset;
+}
+
+label.select {
+    position:relative;
+    float: right;
+    margin-top: -5px;
+}

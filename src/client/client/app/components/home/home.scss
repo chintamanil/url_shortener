@@ -1,0 +1,61 @@
+    @import './../../common/styles/_variables';
+    @import './../../common/styles/_mixins';
+    .home {}
+
+    .homeButtons a {
+        @include buttonClass(100px, 20px, block);
+    }
+
+    .homeButtons {
+        position: fixed;
+        top: 60%;
+        margin-top: -300px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-group {
+        border: 1px solid black;
+        @include border-radius(10px);
+        padding: 15px;
+        background-color: $sendMoneyBodyColor;
+        margin-bottom: 20px;
+    }
+
+    .block {
+        display: block;
+        padding: 15px;
+    }
+
+
+    div.formSubmitted {
+        text-align: center;
+        margin-top: calc(40%);
+        font-size: $headerFont;
+    }
+
+    input.sendTo {
+        width: calc(100% - 70px);
+    }
+
+    input.sendAmount {
+        width: calc(100% - 260px);
+    }
+
+    .validEntry,
+    .invalidEntry {
+        color: white;
+        background-color: green;
+        border-radius: 50%;
+        padding: 2px 5px;
+        margin: 0 10px;
+    }
+
+    .invalidEntry {
+        background-color: red;
+        padding: 0 5px;
+    }
+
+    .validEntry {
+        background-color: green;
+    }
