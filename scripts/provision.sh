@@ -9,15 +9,23 @@ set -e
 
 # Example
 
-apt-get update
-apt-get install tree
-apt-get install git
+sudo apt-get  -y update
+sudo apt-get install -y tree
+sudo apt-get install -y git
 
-# source ./node.sh
-# source ./redis.sh
-# source ./mongodb.sh
+# # these make the terminal look much better
+# git clone https://github.com/chintamanil/dotfiles.git
+# source dotfiles/bootstrap.sh
 
-# source setup_redis_mongo.sh
+sudo yarn global add gulp
 
-git clone https://github.com/chintamanil/dotfiles.git
-source dotfiles/bootstrap.sh
+cd /vagrant/src/server
+yarn install
+gulp serve &
+
+cd /vagrant/src/client
+yarn install
+npm rebuild node-sass
+gulp serve &
+
+cd ~

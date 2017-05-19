@@ -1,6 +1,6 @@
 const AppConstants = {
-    baseUrl: 'http://localhost:3000/',
-    api: 'http://localhost:8080/api/',
+    baseUrl: 'http://localhost:8080/',
+    api: 'http://localhost:8089/api/',
     appName: 'Url Shortener'
 };
 
