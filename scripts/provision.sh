@@ -21,11 +21,13 @@ sudo yarn global add gulp
 
 cd /vagrant/src/server
 yarn install
-gulp serve &
+cd dist
+# gulp has already setup dist need to just run the index.js
+node index.js &
 
-cd /vagrant/src/client
-yarn install
-npm rebuild node-sass
-gulp serve &
+# cd /vagrant/src/client
+# yarn install
+# npm rebuild node-sass
+# gulp serve &
 
 cd ~

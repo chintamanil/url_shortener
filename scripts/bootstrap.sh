@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Useful to create server_name vagrant-test.local.com;
 
 # nginx

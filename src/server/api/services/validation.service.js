@@ -22,7 +22,7 @@ function checkUrlValidity(url) {
         const parsedUrl = getLocation(url);
         if (!parsedUrl) {
             reject({
-                status: 400,
+                status: 404,
                 message: 'Invalid Url String'
             });
         }

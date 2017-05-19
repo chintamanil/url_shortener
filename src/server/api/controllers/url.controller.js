@@ -56,7 +56,9 @@ function create(req, res, next) {
         })
         .catch((errorObj) => {
             // Generic catch-the rest, error wasn't TypeError etc
-            res.send(errorObj);
+            res.writeHead(errorObj.status, {"Content-Type": "application/json"});
+            res.write(JSON.stringify(errorObj));
+            res.end();
         });
 }
 

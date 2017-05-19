@@ -25,7 +25,8 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   config.vm.network "forwarded_port", guest: 80, host: 8080
-  config.vm.network "forwarded_port", guest: 8089, host: 8089
+  config.vm.network "forwarded_port", guest: 8089, host: 8089 # server
+  config.vm.network "forwarded_port", guest: 8088, host: 8088 # client
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -68,15 +69,13 @@ Vagrant.configure("2") do |config|
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
 
-   #Install Node.JS
- #  config.vm.provision "shell", path: "scripts/node.sh"
+# setup nginx
+# config.vm.provision :shell, :path => ".provision/bootstrap.sh"
 
- # #Install Redis
- # config.vm.provision "shell", path: "scripts/redis.sh"
- #Install MongoDB
- # config.vm.provision "shell", path: "scripts/mongodb.sh"
  #Setup applications. The run:"always" parameter will make this run every time the machine is run.
+ # Setup for Mongodb and node.js
  config.vm.provision "shell", path: "scripts/setup_node_mongo.sh", run: "always"
 
+# setting up client and server [NEEDS WORK]
 config.vm.provision "shell", path: "scripts/provision.sh"
 end

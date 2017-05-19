@@ -14,6 +14,7 @@ I got puppet working for node.js but part of the code for mongodb needs work in 
 [ ] For VM Get node.js working for client and server inside vm
 [ ] Add support for redis inside backend API
 [ ] For VM explore setup with puppet for node and mongodb
+[ ] Redirect should be 301 when i paste say localhost:xyz123. Right now its controller based
 
 ### Credentials
 To log into the box, you can simply `vagrant ssh`, to ssh in as the `vagrant` user.
