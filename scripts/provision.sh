@@ -12,20 +12,20 @@ set -e
 sudo apt-get  -y update
 sudo apt-get install -y tree
 sudo apt-get install -y git
-
+sudo apt-get install vim
 # # these make the terminal look much better
 # git clone https://github.com/chintamanil/dotfiles.git
 # source dotfiles/bootstrap.sh
 
 sudo yarn global add gulp
 
-cd /vagrant/src/server
+cd /vagrant/src/server # PORT 8089
 yarn install
 cd dist
 # gulp has already setup dist need to just run the index.js
 node index.js &
 
-# cd /vagrant/src/client
+# cd /vagrant/src/client # PORt 8088
 # yarn install
 # npm rebuild node-sass
 # gulp serve &

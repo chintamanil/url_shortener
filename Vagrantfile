@@ -70,7 +70,8 @@ Vagrant.configure("2") do |config|
   # documentation for more information about their specific syntax and use.
 
 # setup nginx
-# config.vm.provision :shell, :path => ".provision/bootstrap.sh"
+config.vm.provision :shell, :path => "scripts/bootstrap.sh"
+# Ide for nginx is to setup a proxy for client and server WIP
 
  #Setup applications. The run:"always" parameter will make this run every time the machine is run.
  # Setup for Mongodb and node.js
