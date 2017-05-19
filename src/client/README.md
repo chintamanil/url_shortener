@@ -30,7 +30,7 @@ This is the Angular App for client for Url Shortener
 
 
 #To Do
-- [ ] CFull unit tests
+- [ ] Finish full unit tests
 
 
 

@@ -27,7 +27,6 @@ redis-server
 ##Stack
 
 * MongoDB
-* Redis
 * Node.js
 
 ## Features
@@ -38,7 +37,7 @@ redis-server
 
 
 #To Do
-- [ ] Caching with Redis
+- [ ] Add Redis caching
 - [ ] Change console.log() to winston logger for console
 - [ ] Add Loogly to winston logger
 
