@@ -9,25 +9,24 @@ set -e
 
 # Example
 
-sudo apt-get  -y update
+# sudo apt-get  -y update
 sudo apt-get install -y tree
 sudo apt-get install -y git
 sudo apt-get install vim
+sudo npm install -g nodemon
 # # these make the terminal look much better
 # git clone https://github.com/chintamanil/dotfiles.git
 # source dotfiles/bootstrap.sh
 
 sudo yarn global add gulp
 
-cd /vagrant/src/server # PORT 8089
+cd /var/www/client # PORT 8088
 yarn install
-cd dist
-# gulp has already setup dist need to just run the index.js
-node index.js &
+npm rebuild node-sass
+gulp serve &
 
-# cd /vagrant/src/client # PORt 8088
-# yarn install
-# npm rebuild node-sass
-# gulp serve &
+cd /var/www/server/dist # PORT 8089
+# gulp has already setup dist need to just run the index.js
+nodemon index.js
 
 cd ~
