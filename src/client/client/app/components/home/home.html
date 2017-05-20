@@ -4,7 +4,7 @@
 <main>
     <div class="home">
         <div class="body">
-            <div class="sendMoney">
+            <div >
                 <form name="form">
                     <div class="form-group">
                         <label for="url">Url:</label>
@@ -19,11 +19,11 @@
                             Submit Url for Minification
                         </button>
                     </div>
-                    <div class="sendMoney" ng-show="$ctrl.showResult">
+                    <div  ng-show="$ctrl.showResult">
                         <button ng-show="$ctrl.isValid" type="submit" class="" value="shortUrl" ng-click="$ctrl.validateShortUrl($ctrl.shortHash)">
                             {{$ctrl.shortUrl}}
                         </button>
-                        <p class="sendMoney" ng-hide="$ctrl.isValid">
+                        <p  ng-hide="$ctrl.isValid">
                             {{$ctrl.shortUrl}}
                         </p>
                     </div>

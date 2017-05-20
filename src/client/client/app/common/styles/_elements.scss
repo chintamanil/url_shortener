@@ -9,7 +9,7 @@ input {
 
 input,
  {
-    background-color: $sendMoneyBodyColor;
+    background-color: $homeBodyColor;
     @include apperance(none);
     // border: 1px solid $bodyBorderColor;
     width: 100%;
@@ -79,7 +79,7 @@ button:disabled {
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px $sendMoneyBodyColor inset;
+    -webkit-box-shadow: 0 0 0px 1000px $homeBodyColor inset;
 }
 
 label.select {
