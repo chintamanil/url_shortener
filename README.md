@@ -9,13 +9,16 @@
 I have setup node.js mongodb inside VM. 
 I got puppet working for node.js but part of the code for mongodb needs work in puppet.
 
+## DONE
+[x] VM working for client and server with nginx
+[x]  Server can minify VALID urls and check PHISHING
+[x] Client makes request olny for valid urls. IF response is short hash displays link else error Message
+[x] Unit tests working for Server [Check coverage for report]
 
 ## TO DO
-[ ] For VM Get node.js working for client and server inside vm
 [ ] Add support for redis inside backend API
 [ ] For VM explore setup with puppet for node and mongodb
-[ ] Redirect should be 301 when i paste say localhost:xyz123. Right now its controller based
-[ ] Setup nginx proxy for client and server
+[ ] Redirect should be 301 when i paste say localhost:8080/x123. Right now its controller based
 
 ### Credentials
 To log into the box, you can simply `vagrant ssh`, to ssh in as the `vagrant` user.

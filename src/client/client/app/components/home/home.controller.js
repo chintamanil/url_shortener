@@ -2,10 +2,10 @@ class HomeController {
     constructor(postLongUrlService, AppConstants, validateShortUrlService) {
         'ngInject';
         this._AppConstants = AppConstants;
-        this.formObj = { longUrl: 'http://google.com/path1/path2' };
+        this.formObj = { longUrl: 'http://www.cisco.com/c/en/us/about/careers/working-at-cisco/engineering.html' };
         this.showResult = false;
         this.isValid = true;
-        this.fromReset = function(showString, isValid=true) {
+        this.fromReset = function(showString, isValid = true) {
             this.isValid = isValid;
             this.shortUrl = showString;
             this.formObj = { longUrl: '' };

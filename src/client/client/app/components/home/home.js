@@ -26,7 +26,7 @@ let homeModule = angular.module('home', [
                             window.location = res.data.longUrl;
                         }).catch((err) => {
                             alert(err.data);
-                            window.location = 'http://localhost:8081';
+                            window.location = 'http://localhost:8080';
                             // TODO: validation error create alret box
                         });
                 }
