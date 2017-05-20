@@ -32,30 +32,19 @@ describe('## Misc', () => {
         });
     });
 
-    describe('# Error Handling', () => {
-        it('should handle mongoose CastError - Cast to ObjectId failed', (done) => {
-            request(app)
-                .get('/api/urls/56z787zzz67fc')
-                .expect(httpStatus.NOT_FOUND)
-                .then((res) => {
-                    expect(res.body.message).to.equal('Not Found');
-                    done();
-                })
-                .catch(done);
-        });
-
-        // it('should handle express validation error - url is required', (done) => {
-        //     request(app)
-        //         .post('/api/urls')
-        //         .send({
-        //           longUrl: 'http'
-        //         })
-        //         .expect(httpStatus.BAD_REQUEST)
-        //         .then((res) => {
-        //             expect(res.body.message).to.equal('Invalid Url String');
-        //             done();
-        //         })
-        //         .catch(done);
-        // });
-    });
+    // describe('# Error Handling', () => {
+    //     it('should handle express validation error - url is required', (done) => {
+    //         request(app)
+    //             .post('/api/urls')
+    //             .send({
+    //               longUrl: 'http'
+    //             })
+    //             .expect(httpStatus.BAD_REQUEST)
+    //             .then((res) => {
+    //                 expect(res.body.message).to.equal('Invalid Url String');
+    //                 done();
+    //             })
+    //             .catch(done);
+    //     });
+    // });
 });

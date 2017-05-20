@@ -23,9 +23,10 @@ let homeModule = angular.module('home', [
                     console.log('in state', $stateParams.shortUrl);
                     validateShortUrlService.validate($stateParams.shortUrl)
                         .then((res) => {
-                            console.log(res);
                             window.location = res.data.longUrl;
                         }).catch((err) => {
+                            alert(err.data);
+                            window.location = 'http://localhost:8081';
                             // TODO: validation error create alret box
                         });
                 }

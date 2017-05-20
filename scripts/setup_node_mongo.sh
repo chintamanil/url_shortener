@@ -20,9 +20,11 @@ wget http://download.redis.io/redis-stable.tar.gz
 tar xvzf redis-stable.tar.gz
 cd redis-stable
 make
+sudo cp src/redis-server /usr/local/bin/
+sudo cp src/redis-cli /usr/local/bin/
 
-# cd ~
-# redis-server
+cd ~
+sudo redis-server &
 
 # yarn DONT NEED THIS MOSTLY
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -

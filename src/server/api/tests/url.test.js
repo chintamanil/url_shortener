@@ -42,7 +42,7 @@ describe('## Item APIs', () => {
                 .post('/api/urls')
                 .send(phishingUrl)
                 .then((res) => {
-                    expect(res.body.message).to.equal('Url is Phising Url: http://sl-surgical.com/pip.php');
+                    expect(res.error.text).to.equal('Url is Phising Url: http://sl-surgical.com/pip.php');
                     done();
                 })
                 .catch(done);
@@ -65,7 +65,7 @@ describe('## Item APIs', () => {
             request(app)
                 .get('/api/urls/aaaaaa')
                 .then((res) => {
-                    expect(res.body.message).to.equal('Not Found');
+                    expect(res.error.text).to.equal('ShortUrl not found in DataBase');
                     done();
                 })
                 .catch(done);

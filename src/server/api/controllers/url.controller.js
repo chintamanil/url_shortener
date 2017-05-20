@@ -21,7 +21,11 @@ function load(req, res, next, shortUrl) {
             res.json(urlObj);
             return next();
         })
-        .catch((errorObj) => next(errorObj));
+        .catch((errorObj) => {
+            res.writeHead(errorObj.status, { "Content-Type": "text/plain" });
+            res.write(errorObj.message);
+            res.end();
+        });
 }
 
 /**
@@ -56,8 +60,8 @@ function create(req, res, next) {
         })
         .catch((errorObj) => {
             // Generic catch-the rest, error wasn't TypeError etc
-            res.writeHead(errorObj.status, {"Content-Type": "application/json"});
-            res.write(JSON.stringify(errorObj));
+            res.writeHead(errorObj.status, { "Content-Type": "text/plain" });
+            res.write(errorObj.message);
             res.end();
         });
 }

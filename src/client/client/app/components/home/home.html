@@ -15,14 +15,17 @@
                 </form>
                 <div class="formSubmitted">
                     <div class="homeButtons">
-                        <button type="submit" class="" value="longUrl" ng-click="$ctrl.submitLongUrl($ctrl.formObj.longUrl)">
+                        <button type="submit" class="" ng-disabled="form.$invalid" value="longUrl" ng-click="$ctrl.submitLongUrl($ctrl.formObj.longUrl)">
                             Submit Url for Minification
                         </button>
                     </div>
                     <div class="sendMoney" ng-show="$ctrl.showResult">
-                         <button type="submit" class="" value="shortUrl" ng-click="$ctrl.validateShortUrl($ctrl.shortHash)">
+                        <button ng-show="$ctrl.isValid" type="submit" class="" value="shortUrl" ng-click="$ctrl.validateShortUrl($ctrl.shortHash)">
                             {{$ctrl.shortUrl}}
                         </button>
+                        <p class="sendMoney" ng-hide="$ctrl.isValid">
+                            {{$ctrl.shortUrl}}
+                        </p>
                     </div>
                 </div>
             </div>

@@ -21,12 +21,14 @@ sudo npm install -g nodemon
 sudo yarn global add gulp
 
 cd /var/www/client # PORT 8088
-yarn install
 npm rebuild node-sass
+yarn install
 gulp serve &
 
 cd /var/www/server/dist # PORT 8089
 # gulp has already setup dist need to just run the index.js
 nodemon index.js
+
+sudo service nginx restart
 
 cd ~
