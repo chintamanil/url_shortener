@@ -66,7 +66,7 @@ gulp.task('webpack', ['clean'], (cb) => {
 });
 
 gulp.task('serve', () => {
-    const config = require('./webpack.dev.config');
+    const config = require('./webpack.dist.config');
     config.entry.app = [
         // this modules required to make HRM working
         // it responsible for all this webpack magic
