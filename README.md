@@ -1,5 +1,10 @@
 # OpenDNS Coding Challenge Environment: Url Shortener
 
+## Running Application
+* `vagrant up` Should install node.js mongodb and redis.
+* It will setup nginx proxy for server to localhost:8089 
+* It will setup nginx proxy for lcient to localhost:8080
+
 ## Approach
 * For Backend I used node.js along with bluebird promises. Tests are working for backend
 * For frontend I used angular js. Ntests are written for frontend (needs final touch)

@@ -1,7 +1,6 @@
 #!/bin/bash
-# Useful to create server_name vagrant-test.local.com;
+# FOR setting up nginx proxy for client and server
 
-# nginx
 sudo apt-get -y install nginx
 
 # set up nginx server
