@@ -1,7 +1,7 @@
 # OpenDNS Coding Challenge Environment: Url Shortener
 
 ## Running Application
-* `vagrant up` Should install node.js mongodb and redis.
+* `vagrant up --provision` Should install node.js mongodb and redis.
 * It will setup nginx proxy for server to localhost:8089 
 * It will setup nginx proxy for lcient to localhost:8080
 
