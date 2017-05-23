@@ -27,6 +27,6 @@ const populateDummyData = () => {
     //     });
     //     createdUrl.save();
     // });
-    console.log('sample data');
+    console.log('Node server Started at Port: 8089');
 };
 export default populateDummyData;
