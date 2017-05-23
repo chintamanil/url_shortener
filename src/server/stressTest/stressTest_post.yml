@@ -1,0 +1,14 @@
+config:
+  target: ' http://localhost:8089'
+  variables:
+    longUrl: 'http://www.cisco.com/c/en/us/about/careers/working-at-cisco/engineering.html'
+  phases:
+    - duration: 60
+      arrivalRate: 50
+  defaults:
+    headers:
+
+scenarios:
+  - flow:
+    - get:
+        url: "/api/urls/c582e9"
