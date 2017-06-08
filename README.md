@@ -1,4 +1,4 @@
-# OpenDNS Coding Challenge Environment: Url Shortener
+# Url Shortener
 
 ## Running Application
 * `vagrant up --provision` Should install node.js mongodb and redis.
